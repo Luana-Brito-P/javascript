@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        #res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()"> <br>
+    <div id="res">Resultado:</div>
+    <script>
+        function somar() {
+            //Passo 01
+            var tn1 = window.document.getElementById('txtn1') 
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res') 
+            //Passo 02
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            //Passo 03
+            var s = n1 + n2
+            res.innerHTML = `Resultado: A soma entre ${n1} e  ${n2} é igual a <strong>${s}</strong>`
+        }
+        /* Explicando e Entendendo
+        Passo 1
+        O valor adicionado pelo o usuário precisa ser guardado, ou seja, precisamos adicionar ela a uma caixa (Variável), então criamos uma variácel para cada valor adicionado ao seu respectivo id.
+
+        Passo 02
+        O valor inserido pelo o usuário é reconhecido como uma string, para isso convertemos para um number com a e expressão Number()
+
+        Passo 03
+         Adicionamos uma variável s com a soma dos valores e adicionamor um texto com o resultado, fazendo uma ligação dele com a div#res lá em cima
+        */
+
+    </script>
+</body>
+</html>
