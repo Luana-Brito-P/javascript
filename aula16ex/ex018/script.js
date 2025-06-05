@@ -1,7 +1,7 @@
 let num = document.getElementById('fnum')
 let lista = document.getElementById('flista')
 let res = document.getElementById('res')
-let valores = []
+let valores = [] // variável composta array
 
 function isNumero(n) {
     if(Number(n) >= 1 && Number(n) <= 100) {
